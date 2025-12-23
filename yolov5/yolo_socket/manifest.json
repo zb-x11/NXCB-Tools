@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YOLO Detection Monitor",
+  "version": "1.0",
+  "description": "接收YOLOv5检测结果并显示通知",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YOLO Detection"
+  },
+  "host_permissions": [
+    "http://localhost:3000/*"
+  ]
+}
