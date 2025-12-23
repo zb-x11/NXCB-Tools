@@ -1,0 +1,2 @@
+2025-12-23在项目中增加了web通信功能。增加的文件为 server_yolo.py    文件夹为yolo_server和yolo_socket。其中yolo_socket为chrome插件安装包。yolo_server中的文件是服务端的运行文件。使用教程，首先chrome中开发者模式下，安装插件包yolo_socket。其次运行yolo_server文件夹中的文件。如遇到未安装环境，安装即可。再第二个终端中运行python detect_socket.py --weights yolov5s.pt --source 0 --webhook-enabled --view-img
+同时需要chrome打开http://localhost:3000即可。
